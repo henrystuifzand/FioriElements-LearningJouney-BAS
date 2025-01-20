@@ -141,6 +141,28 @@
                         </Record>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>planeDetails}"/>
+                            <PropertyValue Property="ID" String="i18nplaneDetails"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="_Flight/PlaneType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="_Flight/MaximumSeats"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="_Flight/OccupiedSeats"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
             </Annotations>
             <Annotations Target="SAP__self.BookingType/CustomerID">
                 <Annotation Term="Common.Text" Path="_Customer/LastName">
