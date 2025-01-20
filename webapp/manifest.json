@@ -114,6 +114,15 @@
             "TravelList",
             "TravelObjectPage"
           ]
+        },
+        {
+          "name": "Travel__BookingObjectPage",
+          "pattern": "Travel({key})/_Booking({_BookingKey}):?query:",
+          "target": [
+            "TravelList",
+            "TravelObjectPage",
+            "Travel__BookingObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -152,11 +161,31 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Travel"
+              "contextPath": "/Travel",
+              "navigation": {
+                "_Booking": {
+                  "detail": {
+                    "route": "Travel__BookingObjectPage"
+                  }
+                }
+              }
             }
           },
           "controlAggregation": "midColumnPages",
           "contextPattern": "/Travel({key})"
+        },
+        "Travel__BookingObjectPage": {
+          "type": "Component",
+          "id": "Travel__BookingObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "controlAggregation": "beginColumnPages",
+          "options": {
+            "settings": {
+              "navigation": {},
+              "contextPath": "/Travel/_Booking"
+            }
+          },
+          "contextPattern": "/Travel({key})/_Booking({_BookingKey})"
         }
       }
     },
