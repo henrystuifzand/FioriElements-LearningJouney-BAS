@@ -178,7 +178,7 @@
           "type": "Component",
           "id": "Travel__BookingObjectPage",
           "name": "sap.fe.templates.ObjectPage",
-          "controlAggregation": "beginColumnPages",
+          "controlAggregation": "endColumnPages",
           "options": {
             "settings": {
               "navigation": {},
